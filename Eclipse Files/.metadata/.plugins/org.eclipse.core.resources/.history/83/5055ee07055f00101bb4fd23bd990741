@@ -1,0 +1,26 @@
+import static org.junit.Assert.*;
+
+import java.util.Locale;
+
+import org.junit.Test;
+
+
+
+public class TranslationTest {
+
+	@Test
+	public void testGerman(){
+		PrintBalance german = new PrintBalance(new Locale("de", "DE"));
+		assertEquals(german.a, "Hallo Welt");
+		assertEquals(german.b, "Bitte geben Sie Ihren Namen");
+		assertEquals(german.c, "Ich freue mich, Sie kennen zu lernen");
+		assertEquals(german.d, "Wie der");
+		assertEquals(german.e, "Du schuldest der Schule");
+		assertEquals(german.f, "Guuuten Bye");
+		assertEquals(german.g, "Hallo Welt");
+		assertEquals(german.h, "Hallo Welt");
+	}
+	
+	
+	
+}

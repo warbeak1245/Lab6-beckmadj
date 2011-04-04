@@ -1,0 +1,14 @@
+import java.util.Locale;
+
+import org.junit.Test;
+
+
+
+public class TranslationTest {
+
+	@Test
+	public void testGerman(){
+		PrintBalance german = new PrintBalance(new Locale("de", "DE"));
+	}
+	
+}

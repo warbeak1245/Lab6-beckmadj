@@ -1,0 +1,56 @@
+import static org.junit.Assert.*;
+
+import java.util.Locale;
+
+import org.junit.Test;
+
+
+
+public class TranslationTest {
+
+	@Test
+	public void testGerman(){
+		PrintBalance german = new PrintBalance(new Locale("de", "DE"));
+		assertEquals(german.a, "Hallo Welt");
+		assertEquals(german.b, "Bitte geben Sie Ihren Namen");
+		assertEquals(german.c, "Ich freue mich, Sie kennen zu lernen");
+		assertEquals(german.d, "Wie der");
+		assertEquals(german.e, "Du schuldest der Schule");
+		assertEquals(german.f, "Guuuten Bye");
+		assertEquals(german.g, "4. April 2011");
+		assertEquals(german.h, "9.876.543,21 €");
+	}
+	
+	@Test
+	public void testFrench(){
+		PrintBalance french = new PrintBalance(new Locale("fr", "FR"));
+		assertEquals(french.a, "Bonjour tout le monde");
+		assertEquals(french.b, "S'il vous plaît entrer votre nom");
+		assertEquals(french.c, "Je suis heureux de vous rencontrer");
+		assertEquals(french.d, "Comme des");
+		assertEquals(french.e, "Vous devez l'école");
+		assertEquals(french.f, "Au revoir");
+		assertEquals(french.g, "Hallo Welt");
+		assertEquals(french.h, "Hallo Welt");
+	}
+	
+	@Test
+	public void testEnglish(){
+		PrintBalance french = new PrintBalance(new Locale("en", "EN"));
+		assertEquals(french.a, "Hello World");
+		assertEquals(french.b, "Please enter your name");
+		assertEquals(french.c, "I am pleased to meet you");
+		assertEquals(french.d, "As of");
+		assertEquals(french.e, "You owe the school");
+		assertEquals(french.f, "Au revoir");
+		assertEquals(french.g, "Hallo Welt");
+		assertEquals(french.h, "Hallo Welt");
+	}
+
+	helloworld = Hello World
+	givename = Please enter your name
+	greeting = I am pleased to meet you 
+	dateref = As of
+	owenotice = You owe the school
+	bye = Good Bye
+}

@@ -1,0 +1,8 @@
+
+
+public class TranslationTest {
+
+	#Test
+	public void testGerman()
+	
+}

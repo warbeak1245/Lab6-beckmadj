@@ -1,0 +1,57 @@
+import java.text.DateFormat;
+import java.text.NumberFormat;
+import java.util.Date;
+import java.util.Locale;
+import java.util.ResourceBundle;
+import java.util.Scanner;
+
+
+/**
+ * TODO A simple class that needs to be localized
+ *
+ * @author mohan.
+ *         Created Mar 27, 2010.
+ */
+public class PrintBalance{
+
+	String a, b, c, d, e, f, g, h;
+	/**
+	 * Simple Java Method that is crying out to be localized.
+	 *
+	 * @param args
+	 */
+	public PrintBalance(Locale currentLocale)
+	{
+		ResourceBundle messages;
+
+		messages = ResourceBundle.getBundle("MessageBundles", currentLocale);
+		NumberFormat curr = NumberFormat.getCurrencyInstance(currentLocale);
+		DateFormat date = DateFormat.getDateInstance(DateFormat.LONG, currentLocale);
+	
+		Scanner scanInput = new Scanner(System.in);
+		Date today = new Date();
+		
+		//Greeting
+		a = messages.getString("helloworld");
+		System.out.println(a);
+		
+		//Get User's Name
+		b = messages.getString("givename");
+		System.out.println(b);
+		String name = scanInput.nextLine();
+		c = messages.getString("greeting");
+		System.out.println(c + " " + name);
+		
+		//print today's date, balance and bid goodbye
+		d = messages.getString("dateref");
+		e = messages.getString("owenotice");
+		f = messages.getString("bye");
+		g = date.format(today);
+		h = curr.format(9876543.21);
+		System.out.println(d + " : " + g);
+		System.out.println(e + " " + h);
+		System.out.println(f);
+	}
+}
+
+
